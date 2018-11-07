@@ -1,3 +1,13 @@
+[image1]: ./Images/2DofRobot.PNG
+[image2]: ./Images/Arm_config_diagram.PNG
+[image3]: ./Images/2DofRobot2.PNG
+[image4]: ./Images/Arm_config_diagram.PNG
+[image5]: ./Images/Cartesian.PNG
+[image6]: ./Images/cylindrical_ws.PNG
+[image7]: ./Images/Anthoromorphic.PNG
+[image8]: ./Images/SCARA.PNG
+[image9]: ./Images/Spherical.PNG
+
 # Robot Kinematics
 
 Introduction 
@@ -21,6 +31,8 @@ Two points connect by a stiff rod needs 3 variables to describe it's position in
 
 ## Two DoF Arm 
 
+![alt text][image1]
+
 A system of two points can be constrained down to just one degree of freedom by connecting the points with a rod and anchoring the system at one end. 
 
 If we add another (3rd point), we introduce a 2nd DoF, effectively creating a system of points that ressembles a robotic arm. 
@@ -31,6 +43,7 @@ Two additional parameters are need to completely describe the configuration of t
 0. Joint angle 1
 1. Joint angle 2
 
+![alt text][image3]
 
 # Excersie 
 
@@ -38,7 +51,7 @@ I am going to write a function in python that takes in the length of 2 linkks, t
 
 This function will be later implemented in a jupyter notebook for easier portability. For now let's explain some math that drives the code. 
 
-![alt text][image] 
+![alt text][image2] 
 
 At the local frame 1 solving for the position of P1 with respect to the global frame at P0
 
@@ -100,7 +113,7 @@ A point has 3 degrees of freedom in space
 
 # Joint types
 
-![alt text][JointTypes] 
+![alt text][image4] 
 
 There are two commonly used joint types when dealing with serial manipulators
 
@@ -154,7 +167,7 @@ Choosing a manipulator
 --- 
 
 # Cartesian 
-![alt text][Cartesian]
+![alt text][image5]
 
 The first three joints of a Cartesian manipulator are prismatic joints with mutually orthogonal axes of translation.
 
@@ -181,6 +194,7 @@ Palletizing
 Heavy assembly operations (e.g., cars and airplane fuselage)
 
 # Cylindrical 
+![alt text][image6]
 
 As the name suggests, the joints of a cylindrical manipulator are the cylindrical coordinates of the wrist center relative to the base.
 
@@ -201,6 +215,7 @@ Typical Applications:
 Depends on the size, small versions used for precision assembly, larger ones for material handling, machine loading/unloading
 
 # Anthropomorphic manipulator 
+![alt text][image7]
 
 Anthropomorphic (sometimes called articulated) manipulators provide a relatively large workspace with a compact design. The first revolute joint has a vertical axis of rotation and can be thought of as mimicking a human’s ability to rotate at the waist. The other two revolute joints have axes of rotation that are perpendicular to the "waist" and mimic a one DoF “shoulder” and a one DoF “elbow”.
 
@@ -220,6 +235,8 @@ Welding, spray painting, deburring, material handling
 
 # SCARA 
 
+![alt text][image8]
+
 The SCARA, or Selectively Compliant Assembly Robot Arm, was invented by Professor Hiroshi Makino of Yamanashi University (Japan) in the early 1980s. SCARA robots typically employ a single revolute wrist with the axis of rotation parallel to the other two revolute joints. Since the base link typically houses the actuators for the first two joints, the actuators can be very large and the moving links relatively light. Thus, very high angular speeds are obtainable with this design. The arm is very stiff in the vertical (z-axis), but relatively compliant in the x-y plane, which makes it ideal for tasks such as inserting pegs or other fasteners into holes.
 
 Pros:
@@ -237,6 +254,7 @@ Precision, high-speed, light assembly within a planar environment
 
 
 # Spherical 
+![alt text][image9]
 
 Like the cylindrical manipulator, the spherical manipulator’s wrist center can also be described as a well-known coordinate system. Probably the best known version of this kinematic type is Stanford’s Scheinman arm, invented by Victor Scheinman in 1969.
 
