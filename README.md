@@ -2,7 +2,7 @@
 [image2]: ./Images/Arm_config_diagram.PNG
 [image3]: ./Images/2DofRobot2.PNG
 [image4]: ./Images/JointTypes.PNG
-[image5]: ./Images/Cartesian.PNG
+[image5]: ./Images/cartesian_ws.PNG
 [image6]: ./Images/cylindrical_ws.PNG
 [image7]: ./Images/Anthoromorphic.PNG
 [image8]: ./Images/SCARA.PNG
