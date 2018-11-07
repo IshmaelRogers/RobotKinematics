@@ -13,13 +13,18 @@
 Introduction 
 ---
 
-classical mechanics of how things moves without regards to the forces that cause 
+Kinematic belong to classical mechanics and is the of how things moves without regards to the forces that cause it to move. 
 
-Forward kinematics the joint variables are known, calculate position and orientation of EE in cartesian cordinates
+For serial manipulators there are two types of Kinematics that we focus on:
 
-Inverse kinematics the pose is known, calculate joint variables need to be calculated
+0. Forward
+1. Inverse 
 
-Degrees of freedom (DOF)
+0. In Forward Kinematics the joint variables are known, and the taske is to calculate the position and orientation of the end effector in cartesian cordinates. 
+
+1. Inverse Kinematics involves previous knowledge about the pose and the task is to calculate joint variables need to be to acheive that pose. 
+
+# Degrees of freedom (DOF)
 
 The minimum number of variables that are required to define the position or configuration of a mechanism in space. 
 
@@ -27,23 +32,28 @@ A single point that lies on a line needs only one coordinate to describe its pos
 
 That same point on a plane needs two coordniates to describe its motion (x,y)
 
-Two points connect by a stiff rod needs 3 variables to describe it's position in space. (x, y, angle). 
+Two points connected by a stiff rod needs 3 variables to describe it's position in space. 
+
+(x, y, angle)
 
 ## Two DoF Arm 
 
 ![alt text][image1]
 
-A system of two points can be constrained down to just one degree of freedom by connecting the points with a rod and anchoring the system at one end. 
+Consider a system of two points, this system can be constrained down to just one degree of freedom by connecting the points with a rod and anchoring the system at one end. 
 
-If we add another (3rd point), we introduce a 2nd DoF, effectively creating a system of points that ressembles a robotic arm. 
+Adding a 3rd point, would introduce a 2nd DoF system; 
+
+![alt text][image3]
+
+Creating a system of points that ressembles a robotic arm. 
+
 Fixing p0 to the origin of the coordinate frame and specifying the length of each link introduced constraints to the robot.
 
-Two additional parameters are need to completely describe the configuration of the system
+From here only 2 additional parameters are need to completely describe the configuration of the system
 
 0. Joint angle 1
 1. Joint angle 2
-
-![alt text][image3]
 
 # Excersie 
 
