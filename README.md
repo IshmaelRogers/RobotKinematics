@@ -474,11 +474,24 @@ NOTE: when cos(beta) = 0 i.e beta = 90 degrees, atan2 is undefined and the syste
 
 Please see rot2euler.py in this repository to get an example of how this is accomplished
 
-
-
-
+Results of code as is 
+---
+alpha is  45.0000000000000 degrees
+beta is   60.0000000000000 degrees
+gamma is  30.0000000000000 degrees
 
 # Translations 
+
+Consider two reference frames A and B that have the same orientation but their origins are not coincident. 
+
+[translation]
+
+
+
+
+describing P relative to A is vector addition 
+
+A_r_P/A = A_r_B/A + B_r_p/B
 
 # Homogeneous Transformations
 
