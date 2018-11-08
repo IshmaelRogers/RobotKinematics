@@ -322,11 +322,23 @@ NOTE: Since cosine is adjacent/hypotenuse, vx = v*cos(theta)
 
 It is possible to have multiple reference frames. We will draw a new reference frame, B and describe vector v ( and ultimately the position of p) relative to it. 
 
+NOTE: vector v has the exact same magnitude in reference frame B that it had in reference frame A.  
+
 [reference frame B]
 
-
+In general, all we are doing is projecting vectors expressed in one ferame onto some other frame with rotation matrices. 
 
 # Rotation Matrices in 2D
+
+There are to conceptual interpertations of rotation matrices:
+
+0. The means for expressing a vector in one coordinate frame in terms of some other coordinate frame. 
+NOTE: This is known as mapping between frames
+1. Can be viewed as an operator that moves a vector within a single coordinate frame. 
+
+
+
+
 
 # Rotation Matrices in 3D
 
