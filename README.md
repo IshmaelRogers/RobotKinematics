@@ -8,10 +8,10 @@
 [image8]: ./Images/SCARA.PNG
 [image9]: ./Images/Spherical.PNG
 
-# Robot Kinematics
-
-Introduction 
+Robot Kinematics
 ---
+# Introduction 
+
 
 Kinematic belong to classical mechanics and is the of how things moves without regards to the forces that cause it to move. 
 
