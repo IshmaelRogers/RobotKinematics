@@ -391,11 +391,92 @@ Representing expressions symbolically has two major advantages
 1. Numerically. 
 NOTE: Computers cannot perform floating point operations with infinite precision. 
 
-
+Please see "SymPyRot.py" in this repository for an example implemention 
 
 # Composition of Rotations
+A sequence of rotation
+
+Extrinsic
+--- 
+
+Euler Angle
+
+orientation of any rigid boy wrt fixed frame acan be describe by three elementary rotations in a given sequence 
+
+Properties
+
+COnventions
+
+0. Tait-Bryan vs Classic
+1. Rotation order
+2. Intrinsic (body fixed) vs Extrinsic (fixed axis) rotations
+
+Tait-Bryan
+---
+each elementary rotatio is perfomred about a different Catesian axis 
+
+Rotation order
+---
+NPTE none-communiative 
+
+yz =/ zy
+
+Extrinsic vs Intrinsic Rotation
+---
+
+Extrinsic rotations are performed about the fixed world reference frame
+
+[Extinsic]
+
+y-z of fixed reference
+NOTE: subsequent elementary rotations are pre-multiplied 
+
+Intrinsic rotations are performed about the current reference frame
+
+[Intrinsic]
+NOTE: subsequent elementary rotations are post-multiplied
+
+Drawbacks to euler angles
+---
+
+0. Numerical performance - When defining the orientation of a rigid body in 3D, we only need three generalized coordinates; however, rotation matrices contain nine elements. Not all 9 elements are independent and more memory is required to capture the orientation information.
+
+1. Numerical stability -> numerical drift - rounding errors that occur with the repeated multiplication of rotation.
+NOTE: overtime, the orthonormality conditions can be violated and the matrix is no longer a valid rotation matrix. 
+
+2. Singularities of representation (gimbal lock) - occur when the second rotation in the sequence is such that the firat and third coordniates frames become aligned causing a loss of a degree of freedom. 
+
+NOTE: ensure that the range of motion of the object of interest does not come close to a singularity
 
 # Euler Angles from a Rotation Matrix
+
+In cases involving Inverse Kinematics, we are given a composite rotation matrix and we need to find a set of Euler ANgles that would produce this rotation. 
+NOTE: Although the specific solution depends on the choice of Euler angles, the basic procedure is the same. 
+
+# Example 
+
+Consider the extrinsic X-Y-Z rotation sequence. The composite rotation matrix is 
+
+[Example1] 
+
+Given the numerical values for rij, find the angles alpha, beta and gama.
+
+Solution:
+
+use various combinations or rij so that each angle can be individually isolated and solved explicitly. 
+NOTE: To avoid sign ambiguity, DO NOT use inverse sine or cosine functions to solve for the angles.
+NOTE: We use the atan2 function to avoid this ambiguity
+
+[solve4eulerangles] 
+
+
+NOTE: when cos(beta) = 0 i.e beta = 90 degrees, atan2 is undefined and the system exhibits a singularity of representation. 
+
+Please see rot2euler.py in this repository to get an example of how this is accomplished
+
+
+
+
 
 # Translations 
 
