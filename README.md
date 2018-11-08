@@ -335,14 +335,63 @@ There are to conceptual interpertations of rotation matrices:
 0. The means for expressing a vector in one coordinate frame in terms of some other coordinate frame. 
 NOTE: This is known as mapping between frames
 1. Can be viewed as an operator that moves a vector within a single coordinate frame. 
+NOTE: Although the decription of these two interpertations are different, the mathematics works out to be the exact same. 
+
+[b reference frame picture]
+
+How to express v with respect to reference frames A and B
+
+[ V_wrt_AandB]
 
 
+simplifing equation 5 will provide us with the following:
 
+[2D rotation matrix]
 
+The first term on the right is the rotation matrix. 
+
+The columns of the rotation matrix are the basis vectors of B expressed in terms of A
+
+[Basis vectors] 
+
+The rows of the rotation matrix are the projection of the A frame onto the B frame 
+
+[projection]
+
+The rotation from A to B is equal to the transpose of the rotation from B to A. 
+NOTE: Because rotation matrices are composed of orthogonal unit vectors (orthonormal) they have the following useful properties.
+
+0. The transpose is equal to its inverse
+1. The determinant is equal to +1 (assuming right-handed coordinate system)
+2. Columns (and rows) are mutual orthogonal unit vectors i.e the magnitde of any column or row is equal to one and the dot product of any two columns or rows is equal to zero.
+3. The columns define the basis vectors (i.e x,y,z axes) of the rotated frame relativee to the base frame. 
 
 # Rotation Matrices in 3D
 
+The same properties that apply in 2D also work for 2D.
+[3D rotation] 
+
+projecting the basis vectore of 1 frame onto another 
+
+Elementary rotations
+
+[Rotx]
+
+[Roty]
+
+[Rotz]
+
 # Rotations in Sympy
+
+Sympy is a full-featured computer algebra system (CAS) that allows for the construction and manipulation of matrices symbolically and can numerically evaluate them when necessary. 
+
+Representing expressions symbolically has two major advantages
+
+0. The visualization of equations proivde more insight into the system
+1. Numerically. 
+NOTE: Computers cannot perform floating point operations with infinite precision. 
+
+
 
 # Composition of Rotations
 
