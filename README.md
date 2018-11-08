@@ -295,6 +295,37 @@ NOTE: Look up parallel manipulators
 
 # Coordinate Frames and Vectors
 
+A vector is a mathematical quantity that has both magnitude and direction.
+
+Velocity, force position 
+
+A coordnate frame aka the reference frame is where the vecotr can be graphically represented. 
+
+
+In this example the vector v represents the position of point P on the A reference frame. 
+
+v can be represented as:
+
+0. Basis vector
+1. An equation 
+
+where v_x and v_y are called measure numbers because they measure how much of v is point in the direction defined by the unit vector ax_hat and ay_hat.
+
+v_x and v_y are the magnitudes of v acting in the a_x and a_y directions. 
+
+Q: How to determine numerical values for v_x and v_y? 
+A: We project v onto ax_hat and ay_hat using the dot product operator. 
+
+[dot product image]
+
+NOTE: Since cosine is adjacent/hypotenuse, vx = v*cos(theta)
+
+It is possible to have multiple reference frames. We will draw a new reference frame, B and describe vector v ( and ultimately the position of p) relative to it. 
+
+[reference frame B]
+
+
+
 # Rotation Matrices in 2D
 
 # Rotation Matrices in 3D
