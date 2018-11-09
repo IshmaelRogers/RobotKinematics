@@ -26,6 +26,8 @@
 [image19]: ./Images/example.png
 [image20]: ./Images/inverseTransform.png
 [image21]: ./Images/Homogenous_Comp.png
+[image22]: ./Images/DHPARAMETERS.PNG
+      
 
 Robot Kinematics
 ---
