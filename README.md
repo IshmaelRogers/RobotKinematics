@@ -12,6 +12,7 @@
 [image18]: ./Images/Homogenous1.png
 [image19]: ./Images/example.png
 [image20]: ./Images/inverseTransform.png
+[image21]: ./Images/Homogenous_Comp.png
 
 Robot Kinematics
 ---
