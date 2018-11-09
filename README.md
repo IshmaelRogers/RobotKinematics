@@ -487,13 +487,25 @@ Consider two reference frames A and B that have the same orientation but their o
 [translation]
 
 
+The position of point P relative to B is denonted by the vector B_r_P/B 
 
+NOTE: The leading superscript describes the reference frame from which the vector r is being measured.
 
-describing P relative to A is vector addition 
+The following equation fully describe the position vector r relative to the B frame 
+
+B_r_P/B = rBx x bx_hat + rBy x by_hat + rBz x bz_hat
+
+We now describe P relative to A, A_r_P/A
+NOTE: describing P relative to A is vector addition 
 
 A_r_P/A = A_r_B/A + B_r_p/B
 
-# Homogeneous Transformations
+# Homogeneous Transformations and their Inverse
+
+Consider a more general case in which reference frames are both simultaneously rotated and translated with respect to each other. 
+
+In the figure below we see point P, whose position is known relative to B and our goal is to again find A_r_P/A.$
+
 
 # Composition of Homogenous Transforms
 
