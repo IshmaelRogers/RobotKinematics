@@ -595,8 +595,6 @@ Combining the two above equations yeilds
 A_r_P/A = (A/B)T x (B/C)T x C_r_P/C = (A/C)T x C_r_P/C
 
 
-
-
 # Denavit-Hartenberg Parameters
 
 # DH Parameter Assignment Algorithm 
