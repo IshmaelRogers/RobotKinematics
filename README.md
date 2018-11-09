@@ -597,6 +597,30 @@ A_r_P/A = (A/B)T x (B/C)T x C_r_P/C = (A/C)T x C_r_P/C
 
 # Denavit-Hartenberg Parameters
 
+In order to use the homogenous transform to locate the end effector we must a reference frame to each link of the manipulator and write the transforms from the fixed base link to link 1, to link 2, all the way to the end eff. 
+
+NOTE: Each transform would require six independent parameters to describe frame i relative to frame i-1
+... 3 for position and 3 for orientation. 
+
+THe DH convention proposed back in 1955 only requires 4 parameters to describe the position and orientation of neighboring reference frames. 
+
+NOTE: There are 5 common versions of this method. It should always be noted which method is being used in order to limit confusion. In this respository we will be using number (2)
+
+0. Waldron, KJ. A study of overconstrained linkage geometry by solution of closure equations, Part I: A method of study (1973). Mech. Mach. Theory 8(1):95-104.
+
+1. Paul, R. (1982). Robot Manipulators: Mathematics, Programming and Control (MIT Press, Cambridge, MA)
+
+2. Craig, JJ. (2005). Introduction to Robotics: Mechanics and Control, 3rd Ed (Pearson Education, Inc., NJ)
+
+3. Khalil, W and Dombre, E. (2002). Modeling, Identification and Control of Robots (Taylor Francis, NY)
+
+4. M. Spong and M. Vidyasagar, Robot Modeling and Control, Wiley, 2005
+
+The parameters involved: 
+
+
+
+
 # DH Parameter Assignment Algorithm 
 
 # The 8 DH Steps
