@@ -561,7 +561,8 @@ Given the position of the end effector with respect to reference frame B, calcul
 Please see the starter.py for an example on how to use python programming to solve this problem. 
 
 
-# Inverse operation (finding the transfrom B to A) 
+Inverse operation (finding the transfrom B to A) 
+---
 
 Inverting the transform is a simple as inverting the 4x4 matrix. 
 
