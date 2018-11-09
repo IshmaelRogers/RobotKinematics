@@ -29,6 +29,8 @@
 [image22]: ./Images/DHPARAMETERS.PNG
 [image23]: FKandIK 
 [image24]: totaltransform 
+[image25]: scaraexample
+[image26]: results
       
 
 Robot Kinematics
@@ -800,23 +802,37 @@ Each row is the transfrom from link i-1 to link i
 In Forward Kinematics we know all the joint variable (i.e the generalized coordinates associated with revolut and prismatic jointss)
 Now we can calculate the pose (the position and orientation) of the end effector in 3D space. 
 
+![alt text][image23]
+
 The problem is a composition of homogenous transforms. Starting at the base link we move link by link to the end effector while using the DH parameters to build each individual transform. 
 
 The image below is the total transform between adjacent links.
-![alt text][image24] 
 
-
-![alt text][image23]
+![alt text][image24]
 
 # Coding the Forward Kinematics for a SCARA Robot
 
 Using the robot below we will write code to calulate the location of the pose of the robot
 
-![alt text][image24]
+![alt text][image25]
 
 Please see FK_example.py in this repository.
 
+Results as coded in the repo
+---
+![alt text][image26]
+
 # Inverse Kinematics
+
+The Inverse Kinematics problem is actually the exact opposite idea. Knowing the pose of the end effector, we want to calculate the joint angles of the manipulator. 
+
+Multipling the total transform equation can result in complicated and non-linear equations. These equations can have zero or multiple solutions. 
+NOTE: These solutions may violte real-world joint limits
+
+What do these different solutions physically mean?
+--
+Consider the case of an "anthropomorphic" (RRR) manipulator; if all we care about is the position of the end effector, there are four possible ways to reach a 3D point in the manipulator’s workspace.
+
 
 # Example
 
