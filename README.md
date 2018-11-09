@@ -27,6 +27,8 @@
 [image20]: ./Images/inverseTransform.png
 [image21]: ./Images/Homogenous_Comp.png
 [image22]: ./Images/DHPARAMETERS.PNG
+[image23]: FKandIK 
+[image24]: totaltransform 
       
 
 Robot Kinematics
@@ -752,9 +754,67 @@ n
 
 # The 8 DH Steps
 
+Step 1 
+
+Label all joints from 1 to n
+
+Step 2 
+
+Label all links from 0 to n
+NOTE: links do nto have to fixed s
+
+Step 3
+
+Draw a line defining all joint axes
+
+Step 4 
+
+Define the common normals between joint axes
+NOTE: We are looking for geometrical relationships between joints (i.e parallel, coincident, etc.) 
+NOTE: Look for ways to minimize non-zero DH paramaters.
+
+Step 5
+
+Assign the Z-axis of frame i to point along the i-th joint axis. Decide if positive Z-axis is up or down. 
+
+Step 6
+
+Define positive x axis for links between base and end-effector. The x axis should point along the common normal from Zi-1 to Zi
+NOTE: x needs to b perpendicular to z
+
+Step 7
+Assign x axis of link 0  
+NOTE: The number of non-zero DH parameters can be minimized by chosing x0 to be coincident with x1 when joint1 is 0 and always choising z0 ro be coincident with z1
+
+Step 8 
+Assigning the x-axis for link n, the last link. 
+NOTE: Alwayss chose x_n to be in the same direction as xn-1 when the last joint has a 0 angle or 0 displacement. x4 is parallel is x3
+
 # DH Parameter Table 
 
+Each row is the transfrom from link i-1 to link i 
+
+
 # Forward Kinematics
+
+In Forward Kinematics we know all the joint variable (i.e the generalized coordinates associated with revolut and prismatic jointss)
+Now we can calculate the pose (the position and orientation) of the end effector in 3D space. 
+
+The problem is a composition of homogenous transforms. Starting at the base link we move link by link to the end effector while using the DH parameters to build each individual transform. 
+
+The image below is the total transform between adjacent links.
+![alt text][image24] 
+
+
+![alt text][image23]
+
+# Coding the Forward Kinematics for a SCARA Robot
+
+Using the robot below we will write code to calulate the location of the pose of the robot
+
+![alt text][image24]
+
+Please see FK_example.py in this repository.
 
 # Inverse Kinematics
 
