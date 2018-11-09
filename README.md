@@ -7,6 +7,7 @@
 [image7]: ./Images/Anthoromorphic.PNG
 [image8]: ./Images/SCARA.PNG
 [image9]: ./Images/Spherical.PNG
+[image16]: ./Images/RotandTrans.PNG
 
 Robot Kinematics
 ---
@@ -504,7 +505,10 @@ A_r_P/A = A_r_B/A + B_r_p/B
 
 Consider a more general case in which reference frames are both simultaneously rotated and translated with respect to each other. 
 
-In the figure below we see point P, whose position is known relative to B and our goal is to again find A_r_P/A.$
+In the figure below we see point P, whose position is known relative to B and our goal is to again find A_r_P/A.
+
+
+![alt text][image16]
 
 
 # Composition of Homogenous Transforms
