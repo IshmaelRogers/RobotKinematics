@@ -7,6 +7,19 @@
 [image7]: ./Images/Anthoromorphic.PNG
 [image8]: ./Images/SCARA.PNG
 [image9]: ./Images/Spherical.PNG
+[image10]: ./Images/DotProduct.PNG
+[image11]: ./Images/reference_frame_B.PNG
+[image12]: ./Images/VwrtAandB.PNG
+[image13]: ./Images/2Drotation1.PNG
+[image14]: ./Images/Basisvector.PNG
+[image15]: ./Images/projection.PNG
+[image151]: ./Images/3Drotation.PNG
+[image152]: ./Images/Rotxyz.PNG
+[image153]: ./Images/Extrinsic.PNG
+[image154]: ./Images/intrinsic.PNG
+[image155]: ./Images/Example1.PNG
+[image156]: ./Images/solve4eulerangles.PNG
+[image157]: ./Images/Translation.PNG
 [image16]: ./Images/RotandTrans.png
 [image17]: ./Images/Homogenous0.png
 [image18]: ./Images/Homogenous1.png
@@ -330,7 +343,7 @@ It is possible to have multiple reference frames. We will draw a new reference f
 
 NOTE: vector v has the exact same magnitude in reference frame B that it had in reference frame A.  
 
-[reference frame B]
+![alt text][image10]
 
 In general, all we are doing is projecting vectors expressed in one ferame onto some other frame with rotation matrices. 
 
@@ -343,26 +356,26 @@ NOTE: This is known as mapping between frames
 1. Can be viewed as an operator that moves a vector within a single coordinate frame. 
 NOTE: Although the decription of these two interpertations are different, the mathematics works out to be the exact same. 
 
-[b reference frame picture]
+![alt text][image11]
 
 How to express v with respect to reference frames A and B
 
-[ V_wrt_AandB]
+![alt text][image12]
 
 
 simplifing equation 5 will provide us with the following:
 
-[2D rotation matrix]
+![alt text][image13]
 
 The first term on the right is the rotation matrix. 
 
 The columns of the rotation matrix are the basis vectors of B expressed in terms of A
 
-[Basis vectors] 
+![alt text][image14] 
 
 The rows of the rotation matrix are the projection of the A frame onto the B frame 
 
-[projection]
+![alt text][image15]
 
 The rotation from A to B is equal to the transpose of the rotation from B to A. 
 NOTE: Because rotation matrices are composed of orthogonal unit vectors (orthonormal) they have the following useful properties.
@@ -375,17 +388,13 @@ NOTE: Because rotation matrices are composed of orthogonal unit vectors (orthono
 # Rotation Matrices in 3D
 
 The same properties that apply in 2D also work for 2D.
-[3D rotation] 
+![alt text][image151] 
 
 projecting the basis vectore of 1 frame onto another 
 
 Elementary rotations
 
-[Rotx]
-
-[Roty]
-
-[Rotz]
+![alt text][image152]
 
 # Rotations in Sympy
 
@@ -432,14 +441,15 @@ Extrinsic vs Intrinsic Rotation
 
 Extrinsic rotations are performed about the fixed world reference frame
 
-[Extinsic]
+![alt text][image153]
 
 y-z of fixed reference
 NOTE: subsequent elementary rotations are pre-multiplied 
 
 Intrinsic rotations are performed about the current reference frame
 
-[Intrinsic]
+![alt text][image154]
+
 NOTE: subsequent elementary rotations are post-multiplied
 
 Drawbacks to euler angles
@@ -463,7 +473,7 @@ NOTE: Although the specific solution depends on the choice of Euler angles, the 
 
 Consider the extrinsic X-Y-Z rotation sequence. The composite rotation matrix is 
 
-[Example1] 
+![alt text][image155]
 
 Given the numerical values for rij, find the angles alpha, beta and gama.
 
@@ -473,7 +483,7 @@ use various combinations or rij so that each angle can be individually isolated 
 NOTE: To avoid sign ambiguity, DO NOT use inverse sine or cosine functions to solve for the angles.
 NOTE: We use the atan2 function to avoid this ambiguity
 
-[solve4eulerangles] 
+![alt text][image156]
 
 
 NOTE: when cos(beta) = 0 i.e beta = 90 degrees, atan2 is undefined and the system exhibits a singularity of representation. 
@@ -490,7 +500,7 @@ gamma is  30.0000000000000 degrees
 
 Consider two reference frames A and B that have the same orientation but their origins are not coincident. 
 
-[translation]
+![alt text][image157]
 
 
 The position of point P relative to B is denonted by the vector B_r_P/B 
