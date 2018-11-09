@@ -8,6 +8,8 @@
 [image8]: ./Images/SCARA.PNG
 [image9]: ./Images/Spherical.PNG
 [image16]: ./Images/RotandTrans.png
+[image17]: ./Images/Homogenous0.png
+[image18]: ./Images/Homogenous1.png
 
 Robot Kinematics
 ---
@@ -523,8 +525,8 @@ NOTE: The above equation is not easily handled bny computers in this form
 
 We will convert the above equation into matrix form using homogeneous coordinates. 
 
-[Homogenous0]
-[Homogenous1]
+![alt text][image17]
+
 
 
 The left side of the above equation is a 4x1 vector . The first three element are the x,y,z coordinate of point P expresend in the A frame.
@@ -536,6 +538,8 @@ It is composed of four sub-matrices.
 1. A_r_B/A is a 3x1 vector and represents the origin of frame B relative to frame A 
 
 The final term on the right hand side is a 4x1 vector where B_r_P/B is the location of P relative to B and is expressed in terms of the B frame.
+
+![alt text][image18]
 
 
 # Composition of Homogenous Transforms
