@@ -661,10 +661,94 @@ The Z-axis os the reference frame is aligned with:
 0. The axis of rotation for revolute joints 
 1. The direction of motion for prismatic joints.
 
+The homogeneous transform from frame i-1 to frame i is constructed as a sequence of four basic transformations, two rotations and two translations as follows:
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=_{i}^{i-1}\textrm{T}=&space;R_{x}(\alpha_{i-1}&space;)&space;\times&space;D_{x}(a_{i-1})&space;\times&space;R_{z}(\theta{i})&space;\times&space;D_{z}(d_{i})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{i}^{i-1}\textrm{T}=&space;R_{x}(\alpha_{i-1}&space;)&space;\times&space;D_{x}(a_{i-1})&space;\times&space;R_{z}(\theta{i})&space;\times&space;D_{z}(d_{i})" title="_{i}^{i-1}\textrm{T}= R_{x}(\alpha_{i-1} ) \times D_{x}(a_{i-1}) \times R_{z}(\theta{i}) \times D_{z}(d_{i})" /></a>
+
+ A question you should always ask yourself is: "Does the transform move the reference frame in link i-1 to be exactly coincident with the reference frame in link i?" If the answer is yes, that is a good sign! 
 
 
 # DH Parameter Assignment Algorithm 
+
+In this section we will focus on the assignment algorithm that can be applied when dealing with a new manipulator.
+
+Label all joints from {1, 2, … , n}.
+
+Label all links from {0, 1, …, n} starting with the fixed base link as 0.
+
+Draw lines through all joints, defining the joint axes.
+
+Assign the Z-axis of each frame to point along its joint axis.
+
+Identify the common normal between each frame \hat{Z}_{i-1} 
+Z
+^
+  
+i−1
+​	  and frame \hat{Z}_{i} 
+Z
+^
+  
+i
+​	  .
+
+The endpoints of "intermediate links" (i.e., not the base link or the end effector) are associated with two joint axes, {i} and {i+1}. For i from 1 to n-1, assign the \hat{X}_{i} 
+X
+^
+  
+i
+​	  to be …
+
+For skew axes, along the normal between \hat{Z}_{i} 
+Z
+^
+  
+i
+​	  and \hat{Z}_{i+1} 
+Z
+^
+  
+i+1
+​	  and pointing from {i} to {i+1}.
+For intersecting axes, normal to the plane containing \hat{Z}_{i} 
+Z
+^
+  
+i
+​	  and \hat{Z}_{i+1} 
+Z
+^
+  
+i+1
+​	 .
+
+For parallel or coincident axes, the assignment is arbitrary; look for ways to make other DH parameters equal to zero.
+
+For the base link, always choose frame {0} to be coincident with frame {1} when the first joint variable ( {\theta}_{1}θ 
+1
+​	  or {d}_{1}d 
+1
+​	 ) is equal to zero. This will guarantee that {\alpha}_{0}α 
+0
+​	  = {a}_{0}a 
+0
+​	  = 0, and, if joint 1 is a revolute, {d}_{1}d 
+1
+​	  = 0. If joint 1 is prismatic, then {\theta}_{1}θ 
+1
+​	 = 0.
+
+For the end effector frame, if joint n is revolute, choose {X}_{n}X 
+n
+​	  to be in the direction of {X}_{n-1}X 
+n−1
+​	  when {\theta}_{n}θ 
+n
+​	  = 0 and the origin of frame {n} such that {d}_{n}d 
+n
+​	  = 0.
+
+
 
 # The 8 DH Steps
 
