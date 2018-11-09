@@ -571,6 +571,31 @@ Inverting the transform is a simple as inverting the 4x4 matrix.
 
 # Composition of Homogenous Transforms
 
+
+
+
+The composition of Homogeneous Transforms mirror the same logic as composition of rotations
+
+
+![alt text][image21]
+
+Assume the transform from frame C relative to frame B is already known. Also the transform from B to A is known. We can therefore express the vector r as the postion of P from the origin of C in frame A by first transforming it to the B frame 
+
+B_r_P/B = (B/C)T x c_r_P/C 
+
+and then transofrming to the A frame
+
+A_r_P/A = (A/B)T B_r_P/B
+
+
+Combining the two above equations yeilds
+
+
+A_r_P/A = (A/B)T x (B/C)T x C_r_P/C = (A/C)T x C_r_P/C
+
+
+
+
 # Denavit-Hartenberg Parameters
 
 # DH Parameter Assignment Algorithm 
