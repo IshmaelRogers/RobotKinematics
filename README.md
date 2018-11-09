@@ -832,6 +832,7 @@ NOTE: These solutions may violte real-world joint limits
 What do these different solutions physically mean?
 --
 Consider the case of an "anthropomorphic" (RRR) manipulator shown below ; if all we care about is the position of the end effector, there are four possible ways to reach a 3D point in the manipulator’s workspace.
+![alt text][image27]
 
 
 # Example
