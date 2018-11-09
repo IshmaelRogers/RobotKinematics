@@ -650,6 +650,20 @@ The joint angle is the angle between <a href="https://www.codecogs.com/eqnedit.p
 
 ![alt text][image22]
 
+In general
+---
+For an n-degree of freedom manipulator there will be n-joints (1,2,...,n) and because every joint connects two links, there are n+1 links (0,1,...,n).
+
+NOTE: The fixed base link is link 0 and the index, i, increases by 1 towards the end effector. 
+NOTE: There is no requirement for the origin of the frame to be physically on the link, rather it needs to move rigidly with the link. 
+
+The Z-axis os the reference frame is aligned with:
+0. The axis of rotation for revolute joints 
+1. The direction of motion for prismatic joints.
+
+
+
+
 # DH Parameter Assignment Algorithm 
 
 # The 8 DH Steps
