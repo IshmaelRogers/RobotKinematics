@@ -7,7 +7,7 @@
 [image7]: ./Images/Anthoromorphic.PNG
 [image8]: ./Images/SCARA.PNG
 [image9]: ./Images/Spherical.PNG
-[image16]: ./Images/RotandTrans.PNG
+[image16]: ./Images/RotandTrans.png
 
 Robot Kinematics
 ---
