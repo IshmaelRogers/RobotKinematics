@@ -511,6 +511,33 @@ In the figure below we see point P, whose position is known relative to B and ou
 ![alt text][image16]
 
 
+This time our reference frames A and B do not have the same orientation. Therefore we must develop a new solution by combining the idea of translations and rotations.
+
+The solution:
+
+Express B_r_P/B in terms of Frame A by applying a rotation matrix between B and A. Next, add the distance between the origin of reference frame B relative to A
+
+A_r_P/A = A/B_R x B_r_P/B + A_r_B/A
+
+NOTE: The above equation is not easily handled bny computers in this form 
+
+We will convert the above equation into matrix form using homogeneous coordinates. 
+
+[Homogenous0]
+[Homogenous1]
+
+
+The left side of the above equation is a 4x1 vector . The first three element are the x,y,z coordinate of point P expresend in the A frame.
+
+The first term on the right side of the equation is a 4x4 matrix called the homogeneous transform .
+It is composed of four sub-matrices.
+
+0. (A/B)R is a 3x3 rotation matrix
+1. A_r_B/A is a 3x1 vector and represents the origin of frame B relative to frame A 
+
+The final term on the right hand side is a 4x1 vector where B_r_P/B is the location of P relative to B and is expressed in terms of the B frame.
+
+
 # Composition of Homogenous Transforms
 
 # Denavit-Hartenberg Parameters
