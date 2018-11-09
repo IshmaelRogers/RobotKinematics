@@ -10,6 +10,7 @@
 [image16]: ./Images/RotandTrans.png
 [image17]: ./Images/Homogenous0.png
 [image18]: ./Images/Homogenous1.png
+[image19]: ./Images/example.png
 
 Robot Kinematics
 ---
@@ -503,6 +504,8 @@ NOTE: describing P relative to A is vector addition
 
 A_r_P/A = A_r_B/A + B_r_p/B
 
+NOTE: The offset for a translation is calculated from the perspective of the new frame
+
 # Homogeneous Transformations and their Inverse
 
 Consider a more general case in which reference frames are both simultaneously rotated and translated with respect to each other. 
@@ -540,6 +543,24 @@ It is composed of four sub-matrices.
 The final term on the right hand side is a 4x1 vector where B_r_P/B is the location of P relative to B and is expressed in terms of the B frame.
 
 ![alt text][image18]
+
+
+Multiplying the the matrices on the right brings us back to the original equation (the one that is difficult for the computer to interpert)
+
+
+Homogenous transforms can be used to calculate the position of a robot arm's end effector.
+
+# Example
+
+Given the position of the end effector with respect to reference frame B, calculate its position with respet to reference frame A (attached to Link 1)
+
+![alt text][image19] 
+
+
+Please see the starter.py for an example on how to use python programming to solve this problem. 
+
+
+
 
 
 # Composition of Homogenous Transforms
