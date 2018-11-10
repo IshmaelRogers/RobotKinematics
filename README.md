@@ -33,6 +33,11 @@
 [image26]: results
 [image27]: wc_example  
 [image28]: WC_ROT2EA
+[image29]: theta1_IK
+[image30]: theta2_ik
+[image31]: d3_IK
+
+
       
 
 Robot Kinematics
@@ -888,5 +893,27 @@ Step 4. Find a set of Euler angles corresponding to the following rotation matri
 Step 5. Choose the correct solution among the set of possible solutions
 ![alt text][image28]
 
-# Example
+# Inverse Kinematics Example
+
+![alt text][image28]
+
+
+In the example above, the point z_c is the wrist center of spherical wrist. 
+NOTE: The cartesian coordinate of z_c have already been calculated
+
+To find theta1, we need to project z_c onto the ground plane by setting the z coordinate = 0
+
+![alt text][image29] 
+
+
+To find theta2, imagine that theta1=0 and project links 2 and 3 onto the x-z plane 
+
+![alt text][image30]
+
+The final joint variable, d3 is the length of the prismatic joint. d3 is the hypotenuse of a right triangle qith sides "r" and "s" we can use Pythagorean's theorem to solve for d3
+
+![alt text][image31]
+
+The first three joint variables are now described in closed form.
+
 
