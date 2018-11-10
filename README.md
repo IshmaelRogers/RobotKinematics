@@ -31,6 +31,8 @@
 [image24]: totaltransform 
 [image25]: scaraexample
 [image26]: results
+[image27]: wc_example  
+[image28]: WC_ROT2EA
       
 
 Robot Kinematics
@@ -831,9 +833,58 @@ NOTE: These solutions may violte real-world joint limits
 
 What do these different solutions physically mean?
 --
-Consider the case of an "anthropomorphic" (RRR) manipulator shown below ; if all we care about is the position of the end effector, there are four possible ways to reach a 3D point in the manipulator’s workspace.
+Consider the case of an "anthropomorphic" (RRR) manipulator shown below; if all we care about is the position of the end effector, there are four possible ways to reach a 3D point in the manipulator’s workspace.
 ![alt text][image27]
 
+Note: If there is no solution the pose is outside of the manipulator's workspace. 
+
+Two methods for solving IK problem
+---
+
+0. Numerical 
+
+This method is guess and iterate until the error is small or it takes so long that you quit. 
+NOTE: The Newton-Raphson algorithm is a common choice because the concept is simpke and has a quadratic rate of convergence of the the initial guess is sufficiently close to the solution. There is no guarantee that the algorithm will converge or even do so quick enough for customer requirements and it only returns one solution. 
+
+1. Analytical (closed form) 
+
+Involves specific aglebraic equations that do not require iteration to solve and have two advantages. 
+0. They are faster than the numerical approach 
+1. Easier to develop rules for which of the possible solutions is the appropriate one. 
+NOTE: Only certain types of manipulators are solvable in closed form. 
+
+If either of the following two conditions are satisfied then the serial manipulator is solvable in closed-form :
+
+0. Three neighboring joint axes intersect at a single point, or
+1. Three neighboring joint axes are parallel (which is technically a special case of 1, since parallel lines intersect at infinity)
+NOTE: Most 6 DoF serial manipulators will satisfy one of those conditions
+
+Spherical Wrist
+---
+
+In order to satisfy the first condition, the last three joints on a serial manipulator are revolute.
+NOTE: The common point of intersection is called the wrist center.
+
+This type of design Kinematically decouples the position and orientation of the end-effector.
+NOTE: Instead of solving 12 nonlinear equations at the same time (1 equation for each row in the overal Homogenous transform matrix), we can independently solve two simpler problems.
+
+0. The cartesian coordinates of the wrist center 
+1. The composition of rotations to orient the end effector.
+
+NOTE: The first 3 joints of a 6 DoF serial manipulator with a spherical wrist would control the position of the wrist center while the last three joints orient the end effector.
+
+Solution procedure for serial manipulators with a spherical wrist
+---
+
+![alt text][image27]
+
+Step 0. Complete the DH parameter table for the robot placing the origin of frames 4, 5, and 6 coincident with the WC 
+Step 1. Find the location of the wrist center relative to the base frame. 
+Step 2. Find the joint variables q1, q2, and q3 such that the wrist center has coordinates eqaul to 
+Step 3. Calculate (3/0)R with the homogenous transforms up to the WC (using the first three joint variables)
+Step 4. Find a set of Euler angles corresponding to the following rotation matrix
+Step 5. Choose the correct solution among the set of possible solutions
+![alt text][image28]
 
 # Example
 
