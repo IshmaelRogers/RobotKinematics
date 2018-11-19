@@ -39,8 +39,7 @@
 
 
       
-
-Robot Kinematics
+Manipulator Kinematics
 ---
 # Introduction 
 
