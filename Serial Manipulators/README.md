@@ -915,4 +915,6 @@ The final joint variable, d3 is the length of the prismatic joint. d3 is the hyp
 
 The first three joint variables are now described in closed form.
 
+# Velocity Kinematics
+
 
