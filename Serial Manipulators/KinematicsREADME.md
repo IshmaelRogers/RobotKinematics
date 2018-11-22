@@ -936,7 +936,61 @@ Equations
 
 To explain this concept I will use a 4 DOF serial manipulator with all revolute joints except joint 3 which is a prismatic joint.
 
-Let <a href="https://www.codecogs.com/eqnedit.php?latex=_{ee}^{0}\textrm{v}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{ee}^{0}\textrm{v}" title="_{ee}^{0}\textrm{v}" /></a> be the velocity of the end-effector with respect to the base frame and <a href="https://www.codecogs.com/eqnedit.php?latex=_{ee}^{0}\textrm{\omega&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{ee}^{0}\textrm{\omega&space;}" title="_{ee}^{0}\textrm{\omega }" /></a> 
+Let <a href="https://www.codecogs.com/eqnedit.php?latex=_{ee}^{0}\textrm{v}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{ee}^{0}\textrm{v}" title="_{ee}^{0}\textrm{v}" /></a> be the translational velocity of the end-effector with respect to the base frame and <a href="https://www.codecogs.com/eqnedit.php?latex=_{ee}^{0}\textrm{\omega&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{ee}^{0}\textrm{\omega&space;}" title="_{ee}^{0}\textrm{\omega }" /></a> is the rotational velocity of the end effector relative to the base frame.
+
+Thus, <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;_{ee}^{0}\textrm{v}\\&space;_{ee}^{0}\textrm{w}&space;\end{bmatrix}&space;=&space;\begin{bmatrix}&space;\frac{\mathrm{d}&space;\theta&space;_{1}}{\mathrm{d}&space;t}\\&space;\frac{\mathrm{d}&space;\theta&space;_{2}}{\mathrm{d}&space;t}&space;\\&space;\frac{\mathrm{d}&space;\theta&space;_{3}}{\mathrm{d}&space;t}&space;\\&space;\frac{\mathrm{d}&space;\theta&space;_{4}}{\mathrm{d}&space;t}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;_{ee}^{0}\textrm{v}\\&space;_{ee}^{0}\textrm{w}&space;\end{bmatrix}&space;=&space;\begin{bmatrix}&space;\frac{\mathrm{d}&space;\theta&space;_{1}}{\mathrm{d}&space;t}\\&space;\frac{\mathrm{d}&space;\theta&space;_{2}}{\mathrm{d}&space;t}&space;\\&space;\frac{\mathrm{d}&space;\theta&space;_{3}}{\mathrm{d}&space;t}&space;\\&space;\frac{\mathrm{d}&space;\theta&space;_{4}}{\mathrm{d}&space;t}&space;\end{bmatrix}" title="\begin{bmatrix} _{ee}^{0}\textrm{v}\\ _{ee}^{0}\textrm{w} \end{bmatrix} = \begin{bmatrix} \frac{\mathrm{d} \theta _{1}}{\mathrm{d} t}\\ \frac{\mathrm{d} \theta _{2}}{\mathrm{d} t} \\ \frac{\mathrm{d} \theta _{3}}{\mathrm{d} t} \\ \frac{\mathrm{d} \theta _{4}}{\mathrm{d} t} \end{bmatrix}" /></a>
+
+Concept: Skew-symmetric matrix (SSM) 
+---
+For an n x n matrix, if <a href="https://www.codecogs.com/eqnedit.php?latex={s}'&space;&plus;&space;s&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{s}'&space;&plus;&space;s&space;=&space;0" title="{s}' + s = 0" /></a> then s is a SSM. 
+
+We can construct a SSM using a 3D vector: 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\vec{a}&space;=&space;\begin{bmatrix}&space;a_{x}\\&space;a_{y}\\&space;a_{z}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\vec{a}&space;=&space;\begin{bmatrix}&space;a_{x}\\&space;a_{y}\\&space;a_{z}&space;\end{bmatrix}" title="\vec{a} = \begin{bmatrix} a_{x}\\ a_{y}\\ a_{z} \end{bmatrix}" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=s(\vec{a})=\begin{bmatrix}&space;0&space;&&space;-a_{z}&space;&a_{y}&space;\\&space;a_{z}&space;&&space;0&space;&&space;-a_{x}&space;\\&space;-a_{y}&space;&&space;a_{x}&space;&&space;0&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s(\vec{a})=\begin{bmatrix}&space;0&space;&&space;-a_{z}&space;&a_{y}&space;\\&space;a_{z}&space;&&space;0&space;&&space;-a_{x}&space;\\&space;-a_{y}&space;&&space;a_{x}&space;&&space;0&space;\end{bmatrix}" title="s(\vec{a})=\begin{bmatrix} 0 & -a_{z} &a_{y} \\ a_{z} & 0 & -a_{x} \\ -a_{y} & a_{x} & 0 \end{bmatrix}" /></a>
+
+Finding the Velocity Kinematics Model
+---
+
+Jacobian matrix
+
+2 DOF arm example (n = 2) 
+---
+<a href="https://www.codecogs.com/eqnedit.php?latex=_{2}^{0}\textrm{v}&space;=&space;\begin{bmatrix}&space;v_{2x}\\&space;v_{2y}\\&space;v_{2z}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{2}^{0}\textrm{v}&space;=&space;\begin{bmatrix}&space;v_{2x}\\&space;v_{2y}\\&space;v_{2z}&space;\end{bmatrix}" title="_{2}^{0}\textrm{v} = \begin{bmatrix} v_{2x}\\ v_{2y}\\ v_{2z} \end{bmatrix}" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=_{2}^{0}\textrm{w}&space;=&space;\begin{bmatrix}&space;w_{2x}\\&space;w_{2y}\\&space;w_{2z}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{2}^{0}\textrm{w}&space;=&space;\begin{bmatrix}&space;w_{2x}\\&space;w_{2y}\\&space;w_{2z}&space;\end{bmatrix}" title="_{2}^{0}\textrm{w} = \begin{bmatrix} w_{2x}\\ w_{2y}\\ w_{2z} \end{bmatrix}" /></a>
+
+Let, 
+<a href="https://www.codecogs.com/eqnedit.php?latex=w_{1}=&space;\frac{\mathrm{d}&space;\theta_{1}}{\mathrm{d}&space;t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w_{1}=&space;\frac{\mathrm{d}&space;\theta_{1}}{\mathrm{d}&space;t}" title="w_{1}= \frac{\mathrm{d} \theta_{1}}{\mathrm{d} t}" /></a> be the velocity of joint 1
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=w_{2}=&space;\frac{\mathrm{d}&space;\theta_{2}}{\mathrm{d}&space;t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w_{2}=&space;\frac{\mathrm{d}&space;\theta_{2}}{\mathrm{d}&space;t}" title="w_{2}= \frac{\mathrm{d} \theta_{2}}{\mathrm{d} t}" /></a> be the velocity of joint 2
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=J&space;=&space;\begin{bmatrix}&space;J_{v1}&space;&&space;J_{v2}&space;\\&space;J_{w1}&space;&&space;J_{w2}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J&space;=&space;\begin{bmatrix}&space;J_{v1}&space;&&space;J_{v2}&space;\\&space;J_{w1}&space;&&space;J_{w2}&space;\end{bmatrix}" title="J = \begin{bmatrix} J_{v1} & J_{v2} \\ J_{w1} & J_{w2} \end{bmatrix}" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=J_{v1}&space;=&space;_{0}^{0}\textrm{z}&space;\times&space;(_{0}^{2}\textrm{O}&space;-&space;_{0}^{0}\textrm{O}&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_{v1}&space;=&space;_{0}^{0}\textrm{z}&space;\times&space;(_{0}^{2}\textrm{O}&space;-&space;_{0}^{0}\textrm{O}&space;)" title="J_{v1} = _{0}^{0}\textrm{z} \times (_{0}^{2}\textrm{O} - _{0}^{0}\textrm{O} )" /></a> where, <a href="https://www.codecogs.com/eqnedit.php?latex=_{0}^{0}\textrm{z}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{0}^{0}\textrm{z}" title="_{0}^{0}\textrm{z}" /></a> is the <a href="https://www.codecogs.com/eqnedit.php?latex=z^{0}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z^{0}" title="z^{0}" /></a> coordinates relative to frame 0. <a href="https://www.codecogs.com/eqnedit.php?latex=z^{0}&space;=&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z^{0}&space;=&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}" title="z^{0} = \begin{bmatrix} 0\\ 0\\ 1 \end{bmatrix}" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=O^{0}&space;=&space;\begin{bmatrix}&space;0\\&space;0\\&space;0&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O^{0}&space;=&space;\begin{bmatrix}&space;0\\&space;0\\&space;0&space;\end{bmatrix}" title="O^{0} = \begin{bmatrix} 0\\ 0\\ 0 \end{bmatrix}" /></a>
+
+If we consider each link of the 2 DOF arm to have lengths, <a href="https://www.codecogs.com/eqnedit.php?latex=l_{1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?l_{1}" title="l_{1}" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=l_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?l_{2}" title="l_{2}" /></a> then, 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=_{2}^{0}\textrm{O}&space;=&space;\begin{bmatrix}&space;l_{1}\cos&space;(\theta&space;_{1})&space;&plus;l_{2}\cos(\theta_{1}&plus;\theta_{2})\\&space;l_{1}\sin(\theta_{1}&space;&plus;&space;l_{2}\sin(\theta_{1}&space;&plus;&space;\theta_{2})\\&space;0&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{2}^{0}\textrm{O}&space;=&space;\begin{bmatrix}&space;l_{1}\cos&space;(\theta&space;_{1})&space;&plus;l_{2}\cos(\theta_{1}&plus;\theta_{2})\\&space;l_{1}\sin(\theta_{1}&space;&plus;&space;l_{2}\sin(\theta_{1}&space;&plus;&space;\theta_{2})\\&space;0&space;\end{bmatrix}" title="_{2}^{0}\textrm{O} = \begin{bmatrix} l_{1}\cos (\theta _{1}) +l_{2}\cos(\theta_{1}+\theta_{2})\\ l_{1}\sin(\theta_{1} + l_{2}\sin(\theta_{1} + \theta_{2})\\ 0 \end{bmatrix}" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=J_{v2}&space;=&space;_{1}^{0}\textrm{z}&space;\times&space;(_{2}^{0}\textrm{O}&space;-&space;_{1}^{0}\textrm{O}&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_{v2}&space;=&space;_{1}^{0}\textrm{z}&space;\times&space;(_{2}^{0}\textrm{O}&space;-&space;_{1}^{0}\textrm{O}&space;)" title="J_{v2} = _{1}^{0}\textrm{z} \times (_{2}^{0}\textrm{O} - _{1}^{0}\textrm{O} )" /></a> where <a href="https://www.codecogs.com/eqnedit.php?latex=_{1}^{0}\textrm{z}&space;=&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{1}^{0}\textrm{z}&space;=&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}" title="_{1}^{0}\textrm{z} = \begin{bmatrix} 0\\ 0\\ 1 \end{bmatrix}" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=_{1}^{0}\textrm{O}&space;=&space;\begin{bmatrix}&space;l_{1}cos(\theta_1)\\&space;l_{1}sin(\theta_1)\\&space;0&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{1}^{0}\textrm{O}&space;=&space;\begin{bmatrix}&space;l_{1}cos(\theta_1)\\&space;l_{1}sin(\theta_1)\\&space;0&space;\end{bmatrix}" title="_{1}^{0}\textrm{O} = \begin{bmatrix} l_{1}cos(\theta_1)\\ l_{1}sin(\theta_1)\\ 0 \end{bmatrix}" /></a> 
+
+Let,
+<a href="https://www.codecogs.com/eqnedit.php?latex=J_{w1}&space;=&space;_{0}^{0}\textrm{z}&space;=&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_{w1}&space;=&space;_{0}^{0}\textrm{z}&space;=&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}" title="J_{w1} = _{0}^{0}\textrm{z} = \begin{bmatrix} 0\\ 0\\ 1 \end{bmatrix}" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=J_{w2}&space;=&space;_{1}^{0}\textrm{z}&space;=&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_{w2}&space;=&space;_{1}^{0}\textrm{z}&space;=&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}" title="J_{w2} = _{1}^{0}\textrm{z} = \begin{bmatrix} 0\\ 0\\ 1 \end{bmatrix}" /></a>
+
+Putting it all together we have: 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=J&space;=&space;\begin{bmatrix}&space;_{0}^{0}\textrm{z}\times&space;(&space;_{2}^{0}\textrm{O}&space;-&space;_{0}^{0}\textrm{O}&space;)&space;&&space;_{1}^{0}\textrm{z}\times&space;(&space;_{2}^{0}\textrm{O}&space;-&space;_{1}^{0}\textrm{O}&space;)&space;\\&space;_{0}^{0}\textrm{z}&space;&&space;_{1}^{0}\textrm{z}&space;\\&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J&space;=&space;\begin{bmatrix}&space;_{0}^{0}\textrm{z}\times&space;(&space;_{2}^{0}\textrm{O}&space;-&space;_{0}^{0}\textrm{O}&space;)&space;&&space;_{1}^{0}\textrm{z}\times&space;(&space;_{2}^{0}\textrm{O}&space;-&space;_{1}^{0}\textrm{O}&space;)&space;\\&space;_{0}^{0}\textrm{z}&space;&&space;_{1}^{0}\textrm{z}&space;\\&space;\end{bmatrix}" title="J = \begin{bmatrix} _{0}^{0}\textrm{z}\times ( _{2}^{0}\textrm{O} - _{0}^{0}\textrm{O} ) & _{1}^{0}\textrm{z}\times ( _{2}^{0}\textrm{O} - _{1}^{0}\textrm{O} ) \\ _{0}^{0}\textrm{z} & _{1}^{0}\textrm{z} \\ \end{bmatrix}" /></a>
+
+
+
+
+
+
+
+
+
+
 
 
 
