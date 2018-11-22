@@ -965,6 +965,20 @@ Let,
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=w_{2}=&space;\frac{\mathrm{d}&space;\theta_{2}}{\mathrm{d}&space;t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w_{2}=&space;\frac{\mathrm{d}&space;\theta_{2}}{\mathrm{d}&space;t}" title="w_{2}= \frac{\mathrm{d} \theta_{2}}{\mathrm{d} t}" /></a> be the velocity of joint 2
 
+then we can explictly define a mathematical relationship between the velocity of the end-effector and the velocities of the joints
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;_{2}^{0}\textrm{v}\\&space;_{2}^{0}\textrm{w}&space;\end{bmatrix}_{6x1}&space;=&space;J_{6x2}\begin{bmatrix}&space;w_{1}\\&space;w_{2}&space;\end{bmatrix}_{2x1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;_{2}^{0}\textrm{v}\\&space;_{2}^{0}\textrm{w}&space;\end{bmatrix}_{6x1}&space;=&space;J_{6x2}\begin{bmatrix}&space;w_{1}\\&space;w_{2}&space;\end{bmatrix}_{2x1}" title="\begin{bmatrix} _{2}^{0}\textrm{v}\\ _{2}^{0}\textrm{w} \end{bmatrix}_{6x1} = J_{6x2}\begin{bmatrix} w_{1}\\ w_{2} \end{bmatrix}_{2x1}" /></a>
+
+To generalize this equation to suit a serial manipulator with n joints:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\zeta_{6x1}&space;=&space;J_{6xn}&space;\cdot&space;\dot{q}_{nx1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\zeta_{6x1}&space;=&space;J_{6xn}&space;\cdot&space;\dot{q}_{nx1}" title="\zeta_{6x1} = J_{6xn} \cdot \dot{q}_{nx1}" /></a>
+
+where,
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\zeta&space;=&space;\begin{bmatrix}&space;_{n}^{0}\textrm{v}_{x}\\&space;_{n}^{0}\textrm{v}_{y}\\&space;_{n}^{0}\textrm{v}_{z}\\&space;_{n}^{0}\textrm{w}_{x}\\&space;_{n}^{0}\textrm{w}_{y}\\&space;_{n}^{0}\textrm{w}_{z}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\zeta&space;=&space;\begin{bmatrix}&space;_{n}^{0}\textrm{v}_{x}\\&space;_{n}^{0}\textrm{v}_{y}\\&space;_{n}^{0}\textrm{v}_{z}\\&space;_{n}^{0}\textrm{w}_{x}\\&space;_{n}^{0}\textrm{w}_{y}\\&space;_{n}^{0}\textrm{w}_{z}&space;\end{bmatrix}" title="\zeta = \begin{bmatrix} _{n}^{0}\textrm{v}_{x}\\ _{n}^{0}\textrm{v}_{y}\\ _{n}^{0}\textrm{v}_{z}\\ _{n}^{0}\textrm{w}_{x}\\ _{n}^{0}\textrm{w}_{y}\\ _{n}^{0}\textrm{w}_{z} \end{bmatrix}" /></a> - is the vector that contains the translational and rotational velocities of the end-effector and <a href="https://www.codecogs.com/eqnedit.php?latex=\dot{q}&space;=&space;\begin{bmatrix}&space;\frac{\mathrm{d}&space;q_{1}}{\mathrm{d}&space;t}\\&space;\frac{\mathrm{d}&space;q_{1}}{\mathrm{d}&space;t}\\&space;\vdots&space;\\&space;\frac{\mathrm{d}&space;q_{n}}{\mathrm{d}&space;t}\\&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dot{q}&space;=&space;\begin{bmatrix}&space;\frac{\mathrm{d}&space;q_{1}}{\mathrm{d}&space;t}\\&space;\frac{\mathrm{d}&space;q_{1}}{\mathrm{d}&space;t}\\&space;\vdots&space;\\&space;\frac{\mathrm{d}&space;q_{n}}{\mathrm{d}&space;t}\\&space;\end{bmatrix}" title="\dot{q} = \begin{bmatrix} \frac{\mathrm{d} q_{1}}{\mathrm{d} t}\\ \frac{\mathrm{d} q_{1}}{\mathrm{d} t}\\ \vdots \\ \frac{\mathrm{d} q_{n}}{\mathrm{d} t}\\ \end{bmatrix}" /></a> is the velocities of each joint and J is the Jacobian Matrix
+
+Continuing with our 2 DOF arm example:
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=J&space;=&space;\begin{bmatrix}&space;J_{v1}&space;&&space;J_{v2}&space;\\&space;J_{w1}&space;&&space;J_{w2}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J&space;=&space;\begin{bmatrix}&space;J_{v1}&space;&&space;J_{v2}&space;\\&space;J_{w1}&space;&&space;J_{w2}&space;\end{bmatrix}" title="J = \begin{bmatrix} J_{v1} & J_{v2} \\ J_{w1} & J_{w2} \end{bmatrix}" /></a>
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=J_{v1}&space;=&space;_{0}^{0}\textrm{z}&space;\times&space;(_{0}^{2}\textrm{O}&space;-&space;_{0}^{0}\textrm{O}&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_{v1}&space;=&space;_{0}^{0}\textrm{z}&space;\times&space;(_{0}^{2}\textrm{O}&space;-&space;_{0}^{0}\textrm{O}&space;)" title="J_{v1} = _{0}^{0}\textrm{z} \times (_{0}^{2}\textrm{O} - _{0}^{0}\textrm{O} )" /></a> where, <a href="https://www.codecogs.com/eqnedit.php?latex=_{0}^{0}\textrm{z}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{0}^{0}\textrm{z}" title="_{0}^{0}\textrm{z}" /></a> is the <a href="https://www.codecogs.com/eqnedit.php?latex=z^{0}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z^{0}" title="z^{0}" /></a> coordinates relative to frame 0. <a href="https://www.codecogs.com/eqnedit.php?latex=z^{0}&space;=&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z^{0}&space;=&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}" title="z^{0} = \begin{bmatrix} 0\\ 0\\ 1 \end{bmatrix}" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=O^{0}&space;=&space;\begin{bmatrix}&space;0\\&space;0\\&space;0&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O^{0}&space;=&space;\begin{bmatrix}&space;0\\&space;0\\&space;0&space;\end{bmatrix}" title="O^{0} = \begin{bmatrix} 0\\ 0\\ 0 \end{bmatrix}" /></a>
@@ -981,6 +995,43 @@ Let,
 Putting it all together we have: 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=J&space;=&space;\begin{bmatrix}&space;_{0}^{0}\textrm{z}\times&space;(&space;_{2}^{0}\textrm{O}&space;-&space;_{0}^{0}\textrm{O}&space;)&space;&&space;_{1}^{0}\textrm{z}\times&space;(&space;_{2}^{0}\textrm{O}&space;-&space;_{1}^{0}\textrm{O}&space;)&space;\\&space;_{0}^{0}\textrm{z}&space;&&space;_{1}^{0}\textrm{z}&space;\\&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J&space;=&space;\begin{bmatrix}&space;_{0}^{0}\textrm{z}\times&space;(&space;_{2}^{0}\textrm{O}&space;-&space;_{0}^{0}\textrm{O}&space;)&space;&&space;_{1}^{0}\textrm{z}\times&space;(&space;_{2}^{0}\textrm{O}&space;-&space;_{1}^{0}\textrm{O}&space;)&space;\\&space;_{0}^{0}\textrm{z}&space;&&space;_{1}^{0}\textrm{z}&space;\\&space;\end{bmatrix}" title="J = \begin{bmatrix} _{0}^{0}\textrm{z}\times ( _{2}^{0}\textrm{O} - _{0}^{0}\textrm{O} ) & _{1}^{0}\textrm{z}\times ( _{2}^{0}\textrm{O} - _{1}^{0}\textrm{O} ) \\ _{0}^{0}\textrm{z} & _{1}^{0}\textrm{z} \\ \end{bmatrix}" /></a>
+
+
+Now let's generalize this process, like we did before, for serial manipulators with n joints:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=J&space;=&space;\begin{bmatrix}&space;J_{v1}&space;&&space;J_{v2}&space;&\cdots&space;&&space;J_{vn}&space;\\&space;J_{w1}&space;&&space;J_{w2}&space;&\cdots&space;&&space;J_{wn}&space;\\&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J&space;=&space;\begin{bmatrix}&space;J_{v1}&space;&&space;J_{v2}&space;&\cdots&space;&&space;J_{vn}&space;\\&space;J_{w1}&space;&&space;J_{w2}&space;&\cdots&space;&&space;J_{wn}&space;\\&space;\end{bmatrix}" title="J = \begin{bmatrix} J_{v1} & J_{v2} &\cdots & J_{vn} \\ J_{w1} & J_{w2} &\cdots & J_{wn} \\ \end{bmatrix}" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=J_{vi}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_{vi}" title="J_{vi}" /></a> (i=1,2,...n) is a 3x1 vector 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=J_{wi}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_{wi}" title="J_{wi}" /></a> (i=1,2,...n) is a 3x1 vector
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=J_{vi}\begin{Bmatrix}&space;_{i-1}^{0}\textrm{z}&space;\times&space;(_{n}^{0}\textrm{O}&space;-&space;_{i-1}^{0}\textrm{O})&space;(revolute)&space;\\&space;\\&space;_{i-1}^{0}\textrm{z}&space;(prismatic)&space;\end{Bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_{vi}\begin{Bmatrix}&space;_{i-1}^{0}\textrm{z}&space;\times&space;(_{n}^{0}\textrm{O}&space;-&space;_{i-1}^{0}\textrm{O})&space;(revolute)&space;\\&space;\\&space;_{i-1}^{0}\textrm{z}&space;(prismatic)&space;\end{Bmatrix}" title="J_{vi}\begin{Bmatrix} _{i-1}^{0}\textrm{z} \times (_{n}^{0}\textrm{O} - _{i-1}^{0}\textrm{O}) (revolute) \\ \\ _{i-1}^{0}\textrm{z} (prismatic) \end{Bmatrix}" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=J_{wi}\begin{Bmatrix}&space;_{i-1}^{0}\textrm{z}&space;(revolute)&space;\\&space;\\&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}(prismatic)&space;\end{Bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_{wi}\begin{Bmatrix}&space;_{i-1}^{0}\textrm{z}&space;(revolute)&space;\\&space;\\&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}(prismatic)&space;\end{Bmatrix}" title="J_{wi}\begin{Bmatrix} _{i-1}^{0}\textrm{z} (revolute) \\ \\ \begin{bmatrix} 0\\ 0\\ 1 \end{bmatrix}(prismatic) \end{Bmatrix}" /></a>
+
+The above definition was intended to explixt explain the components involved in solving these types of problems. Now we explore a simplified method for solving for the velocity kinematics
+
+Steps
+---
+
+1. Determine the Forward Kinematics
+2. Determine <a href="https://www.codecogs.com/eqnedit.php?latex=_{0}^{0}\textrm{z}&,&space;_{1}^{0}\textrm{z},\cdots&space;&,_{n}^{0}\textrm{z}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{0}^{0}\textrm{z}&,&space;_{1}^{0}\textrm{z},\cdots&space;&,_{n}^{0}\textrm{z}" title="_{0}^{0}\textrm{z}&, _{1}^{0}\textrm{z},\cdots &,_{n}^{0}\textrm{z}" /></a>
+3. Determine <a href="https://www.codecogs.com/eqnedit.php?latex=_{0}^{0}\textrm{O}&,&space;_{1}^{0}\textrm{O},\cdots&space;&,_{n+1}^{0}\textrm{O}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{0}^{0}\textrm{O}&,&space;_{1}^{0}\textrm{O},\cdots&space;&,_{n+1}^{0}\textrm{O}" title="_{0}^{0}\textrm{O}&, _{1}^{0}\textrm{O},\cdots &,_{n+1}^{0}\textrm{O}" /></a>
+4. Determine J 
+
+NOTE: <a href="https://www.codecogs.com/eqnedit.php?latex=_{n}^{0}\textrm{z}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{n}^{0}\textrm{z}" title="_{n}^{0}\textrm{z}" /></a> can be obtained from the rotation matrix inside of each Homogenous transformation matrix. 
+NOTE: <a href="https://www.codecogs.com/eqnedit.php?latex=_{n&plus;1}^{0}\textrm{O}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{n&plus;1}^{0}\textrm{O}" title="_{n+1}^{0}\textrm{O}" /></a> can be obtain from the last column of each Homogenous transformation matrix. 
+
+Once we have isolated the necessary components we can combine them to form J as discussed earlier.
+
+Analytical Jacobian
+---
+
+
+
+
+
+
 
 
 
