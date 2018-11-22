@@ -917,4 +917,28 @@ The first three joint variables are now described in closed form.
 
 # Velocity Kinematics
 
+The study of velocity kinematics involves the understanding of the relationship between the velocity of the end-effecto and velocity of each joint. 
+
+Let's start by defining some key variables:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{k}" title="\hat{k}" /></a> - is the unit vector representing the rotational axis 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\vec{\omega&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\vec{\omega&space;}" title="\vec{\omega }" /></a> - the angular velocity of a revolute joint
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\vec{\&space;v&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\vec{\&space;v&space;}" title="\vec{\ v }" /></a> - is the linear velocity of a point.
+
+Equations
+---
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\vec{\&space;v&space;}&space;=&space;\vec{\omega&space;}&space;\&space;\times&space;\vec{\&space;r}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\vec{\&space;v&space;}&space;=&space;\vec{\omega&space;}&space;\&space;\times&space;\vec{\&space;r}" title="\vec{\ v } = \vec{\omega } \ \times \vec{\ r}" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\vec{\omega&space;}&space;=&space;\hat{k}&space;\frac{\mathrm{d}\theta&space;}{\mathrm{d}&space;t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\vec{\omega&space;}&space;=&space;\hat{k}&space;\frac{\mathrm{d}\theta&space;}{\mathrm{d}&space;t}" title="\vec{\omega } = \hat{k} \frac{\mathrm{d}\theta }{\mathrm{d} t}" /></a>
+
+To explain this concept I will use a 4 DOF serial manipulator with all revolute joints except joint 3 which is a prismatic joint.
+
+Let <a href="https://www.codecogs.com/eqnedit.php?latex=_{ee}^{0}\textrm{v}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{ee}^{0}\textrm{v}" title="_{ee}^{0}\textrm{v}" /></a> be the velocity of the end-effector with respect to the base frame and <a href="https://www.codecogs.com/eqnedit.php?latex=_{ee}^{0}\textrm{\omega&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{ee}^{0}\textrm{\omega&space;}" title="_{ee}^{0}\textrm{\omega }" /></a> 
+
+
+
+
 
