@@ -28,7 +28,7 @@ What skills or abilities do you hope to strengthen in the program?
 
 1. Embedded system programming
 
-I took embedded systems as an elective as an undergrad student at Kennesaw State University (KSU). Throughout the course I was constantly reminded at how closely computer architectiure resembles the nervous system. In this program I hope to gain a deeper understanding of embedded systems programming. Fundamentals of Mechatronics, a class at KSU, and Udacity's RoboND program provided me with a decent amount of knowledge in Microcontroller programming. I am excited to expand on this topic from a graduate school prespective. 
+I took embedded systems as an elective as an undergrad student at Kennesaw State University (KSU). Throughout the course I was constantly reminded at how closely computer architectiure resembles the nervous system. In this program I hope to gain a deeper understanding of embedded systems programming so that I can model the mammalian nervous. Fundamentals of Mechatronics, a class at KSU, and Udacity's RoboND program provided me with a decent amount of knowledge in Microcontroller programming my overall goal is to expand on this topic from a graduate school prespective. 
 
 2. Optimal control system design
 
