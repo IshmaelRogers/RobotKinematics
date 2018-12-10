@@ -6,7 +6,7 @@ Dr. Kevin Warrick changed the world by being the world's first cyborg. His resea
 
 2. Complex control systems
 
-Studying mechatronics engineering as an undergrad gave me a glimpse of the importance of designing stable control system. Enhancing my knowledge in complex control systems design will give me the tools necessary to mathematically model the human nervous system and develop a control algorithm to facilitate organic learning in hybird systems using reinforcement learning techniques. 
+Studying mechatronics engineering as an undergrad gave me a glimpse into the importance of designing stable control system. Enhancing my knowledge in complex control systems design will give me the tools necessary to mathematically model the human nervous system and develop a control algorithm to facilitate organic learning in hybird systems using reinforcement learning techniques. 
 
 3. Artificial intelligence 
 
