@@ -21,7 +21,7 @@ What are your career goals?
 1. Serve as CTO for new tech start ups 
 2. MD/PhD 
 3. Develop the next generation of prosthetics 
-4. CEO of a Flying Vehicle company.
+4. CEO of a Flying Vehicle company
 
 
 What skills or abilities do you hope to strengthen in the program?
