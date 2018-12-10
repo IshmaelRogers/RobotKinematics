@@ -2,7 +2,7 @@ Why are you interested in robotics?
 
 1. Cybernetic technology
 
-Dr. Kevin Warrick changed the world by being the world's first cyborg. His research of embodied system is very fascinating. My knowledge in biology coupled with my experience in robotics and control system design will allow me contribute to this area of study and develop more complexed hybird systems. 
+Dr. Kevin Warrick changed the world by being the world's first cyborg. His research in embodied systems is very fascinating. My knowledge in biology coupled with my experience in robotics and control system design will allow me contribute to this area  and develop more complexed hybird systems. 
 
 2. Complex control systems
 
