@@ -1,42 +1,16 @@
-Why are you interested in robotics?
+**Why are you interested in robotics?** 
+Cybernetic Engineering technology, Complex control systems, Artificial intelligence and Prosthetics device
 
-1. Cybernetic technology
+I am obsessed with the control of Mechatronic and Biological systems. One day, I will develop away to seamlessly incorporate the two together; producing the world’s most advanced prosthetics devices.  Previous experiences in biology, robotics and control system design will allow me progressively contribute to this area and develop more complex hybrid systems. 
+Studying mechatronics engineering as an undergrad gave me a glimpse into the importance of designing stable control system. Enhancing my knowledge in complex control systems design will give me the tools extend the knowledge from advanced controls to more complex systems. Currently I am interested in models of the human nervous system and how the brain process signals from individual neurons. In the future I hope to develop a control algorithm to facilitate human like learning in hybrid systems using modified reinforcement learning techniques. 
+My time as a student in Udacity's Robotics Software Engineering Nanodegree (RoboND) program has drastically increased my knowledge in artificial intelligence. Since the field is always changing, my goal is to take advantage of every opportunity to stay current with the technology. This idea is a part of the "lifelong student" mantra. Recently I received a PyTorch Scholarship created in a partnership with Facebook and Udacity. It is a great supplement to school and it allows me to practice my techniques and get better learning how to choose algorithms. 
+When people lose their limbs due to a tragic accident or unfortunate disease, the sometimes feel less than human. I believe that all people deserve the opportunity to restore their humanity with prosthetic devices that closely mirrors the functionality of a human limb. As a Nanotechnology and Biomedicine Research Scholar, I explored the feasibility of polymer surfaces for osteochondral tissue regeneration. Incorporating this technology into artificial limbs could lead to a revolutionary breakthrough in prosthetic technology.  
 
-Dr. Kevin Warrick changed the world by being the world's first cyborg. His research in embodied systems is very fascinating. My knowledge in biology coupled with my experience in robotics and control system design will allow me contribute to this area  and develop more complexed hybird systems. 
+**What are your career goals?**
+ MD/PhD 
+My goal is to obtain an MD and PhD simultaneously at a reputable institution in the United States. With these credentials, I will be able to lead research initiatives that will revolutionize the medical field. With the knowledge gained from the MD/PhD program, I can develop prosthetic devices that can help save lives or increase functionality.
 
-2. Complex control systems
-
-Studying mechatronics engineering as an undergrad gave me a glimpse into the importance of designing stable control system. Enhancing my knowledge in complex control systems design will give me the tools necessary to mathematically model the human nervous system and develop a control algorithm to facilitate organic learning in hybird systems using reinforcement learning techniques. 
-
-3. Artificial intelligence 
-
-My time as a student in Udacity's Robotics Software Engineering Nanodegree (RoboND) program has drastically increased my knowledfe in artificial intelligence. This is an ever changing field, therefore my goal is to always take advantage of opportunities to stay current with the technology. This idea is apart of the "life long student" mantra; learn more and more everyday, and contribute in the future. I'd like to one day revolutionize the field of artificial intelligence. 
-
-4. Prosthetics device 
-
-People lose their limbs as a result of tragic accidents or unfortunate diseases and sometimes feel less than human. I believe that people deserve the opportunity to restore their humanity with prosthetic devices that provides that closesly mirrors the  of a human limb. As a Nanotechnology and Biomedicine Research Scholar, I explored the feasibilty of polymer surfaces for osteochondral tissue regeneration. Incoporating this technology into artificial limb could lead to a revolutionary break through in prosthetic devices.  
-
-What are your career goals?
-
-1. Serve as CTO for new tech start ups 
-2. MD/PhD 
-3. Develop the next generation of prosthetics 
-4. CEO of a Flying Vehicle company
-
-
-What skills or abilities do you hope to strengthen in the program?
-
-1. Embedded system programming
-
-I took embedded systems as an elective as an undergrad student at Kennesaw State University (KSU). Throughout the course I was constantly reminded at how closely computer architectiure resembles the nervous system. In this program I hope to gain a deeper understanding of embedded systems programming so that I can model the mammalian nervous. Fundamentals of Mechatronics, a class at KSU, and Udacity's RoboND program provided me with a decent amount of knowledge in Microcontroller programming my overall goal is to expand on this topic from a graduate school prespective. 
-
-2. Optimal control system design
-
+**What skills or abilities do you hope to strengthen in the program?**
+Embedded system programming, optimal control system design, Distributed systems, Parallel computing, Swarming robotics, Deep Reinforcement Learning, Control for artificial limbs
+I took embedded systems as an elective as an undergrad student at Kennesaw State University (KSU). Throughout the course I was constantly reminded at how closely computer architecture resembles the nervous system. In this program I hope to gain a deeper understanding of embedded systems programming so that I can model the mammalian nervous. Fundamentals of Mechatronics, a class at KSU, and Udacity's RoboND program provided me with a decent amount of knowledge in Microcontroller programming my overall goal is to expand on this topic from a graduate school perspective. 
 Motion planning and autonomous navigation is necessary for a world in which flying cars exist. I'd like to my advance my tools by applying optimal control principles to autonomous flying vehicles.  
-
-
-3. Distributed systems
-4. Parallel computing 
-5. Swarming robotics
-6. Deep Reinforcment Learning
-7. Control for artificial limbs
